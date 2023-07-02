@@ -111,7 +111,11 @@ function num(x: number | string): number {
 }
 
 //Q3
-function merryAble(salary: number, house: boolean, charm: string): string {
+function merryAble(
+  salary: number,
+  house: boolean,
+  charm: string
+): string | void {
   let score: number = 0;
   score += salary;
   if (house == true) {
