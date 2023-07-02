@@ -1,0 +1,23 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "이 레파지토리에서는 다음 TypeScript 관련 주제들을 공부합니다:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seokxx/typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seokxx/typescript/issues"
+  },
+  "homepage": "https://github.com/seokxx/typescript#readme",
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0"
+  }
+}
