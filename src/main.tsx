@@ -189,8 +189,68 @@ function 만들함수(x : {subject :(string|string[])}){
   }
 }
 
-console.log(만들함수( { subject : 'math' } ))  //이 경우 'math'를 return
-console.log(만들함수( { subject : ['science', 'art', 'korean'] } )) //이 경우 'korean'을 return
+//console.log(만들함수( { subject : 'math' } ))  //이 경우 'math'를 return
+//console.log(만들함수( { subject : ['science', 'art', 'korean'] } )) //이 경우 'korean'을 return
 
 
+type Animal = string | number | undefined;
 
+let 동물 :Animal = "monkey";
+
+type 사람={ name: string, age: number}
+
+let teacher :사람 = {name: 'john', age: 20}
+
+const 출생지역 = { region: 'seoul'}
+
+출생지역.region = 'busan'
+
+type Lastname = {
+  readonly name : string
+}
+
+const 성씨 : Lastname = {
+  name : 'hong'
+}
+
+//성씨.name = 'kim' //읽기전용이므로 에러발생
+
+type Lastname2 = {
+  name2? : string
+}
+
+const 성씨2 : Lastname2 = {
+  name2 : 'hong'
+}
+
+성씨2.name2 = 'kim'
+
+type Name = string;
+type Age = number;
+type Person = Name | Age;
+
+type PositionX = {x: number};
+type PositionY = {y: number};
+
+type NewType = PositionX & PositionY
+
+let position: NewType = {x:10, y:20}
+console.log(position)
+
+let 리터럴네임 : 'kim';
+리터럴네임 = 'kim';
+
+let me : '대머리'|'솔로';
+me = '대머리';
+
+function 리터럴함수(a: 'hello'):(1 | 0){
+  return 1
+}
+
+리터럴함수('hello')
+
+function 가위바위보(x : ('가위' |'바위'|'보')):('가위'|'바위'|'보')[]{
+  return ['바위']
+}
+
+console.log(가위바위보('가위'))
