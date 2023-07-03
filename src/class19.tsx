@@ -1,2 +1,2 @@
-let b: Dog = "hong";
-console.log(b);
+// let b: Dog = "hong";
+// console.log(b);

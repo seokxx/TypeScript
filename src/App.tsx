@@ -8,7 +8,6 @@ import {
   incrementByAmount,
   decrementByAmount,
 } from "./index";
-import "./class19";
 
 function App() {
   const state = useSelector((state: RootState) => state);
