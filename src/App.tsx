@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './class11';
+import './class12';
 
 function App(){
   return (
