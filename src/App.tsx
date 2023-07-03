@@ -1,7 +1,6 @@
 import React from 'react';
 
-import './class13';
-import './class14';
+import './class15';
 
 function App(){
   return (
