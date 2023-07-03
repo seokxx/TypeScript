@@ -1,5 +1,5 @@
 import React from 'react';
-import './main';
+// import './main';
 import './main2';
 import './App.css';
 
