@@ -235,7 +235,7 @@ type PositionY = {y: number};
 type NewType = PositionX & PositionY
 
 let position: NewType = {x:10, y:20}
-console.log(position)
+//console.log(position)
 
 let 리터럴네임 : 'kim';
 리터럴네임 = 'kim';
@@ -253,4 +253,69 @@ function 가위바위보(x : ('가위' |'바위'|'보')):('가위'|'바위'|'보
   return ['바위']
 }
 
-console.log(가위바위보('가위'))
+//console.log(가위바위보('가위'))
+
+var 자료 = {
+  name : 'kim'
+} as const
+
+//console.log(자료.name)
+
+function myF(a:'kim'){
+
+}
+myF('kim')
+myF(자료.name)
+
+type 함수타입 = (a :string) => number;
+
+let 함수예제 : 함수타입  = function (a)  {
+  return 10
+}
+
+//q1
+let 회원정보예제 : Member= {
+  name : 'hong',
+  age : 30,
+  plusOne(x){
+    return x+1
+  },
+
+  changeName : () => {
+    console.log('안녕')
+  }
+}
+
+type Member = {
+  name : string,
+  age : number,
+  plusOne : (x: number) => number,
+  changeName : () => void
+}
+
+console.log(회원정보예제.plusOne(10))
+회원정보예제.changeName()
+
+//q2
+type CutType = (a: string) => string
+type RemoveType = (a: string) => number
+
+let cutZero : CutType = (a) => {
+  let result = a.replace(/^0+/,"");
+  return result
+}
+
+let removeDash : RemoveType = (a) => {
+  let result = a.replace(/-/g,"");
+  return parseFloat(result)
+}
+
+//q3
+
+function 콜백함수(a:string,b:CutType,c:RemoveType){
+  let result = b(a);
+  let result2 = c(result);
+  console.log(result2)
+} 
+
+콜백함수('010-1111-2222', cutZero, removeDash)
