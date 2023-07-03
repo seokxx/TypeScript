@@ -17,15 +17,19 @@ let 자식 = new User2();
 console.log(User2.x)
 
 class User3 {
-    static language = 'js'
+    private static language = 'js'
     intro = User3.language + '전문가입니다'
+
+    static changeLang(){
+        User3.language = 'ts'
+    }
 }
 
 let 철수 = new User3();
 console.log(철수)
 
 
-User3.language = 'ts'
+User3.changeLang()
 let 철수2 = new User3();
 console.log(철수2)
 
