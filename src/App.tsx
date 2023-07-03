@@ -1,7 +1,7 @@
 import React from 'react';
 // import './main';
-import './main2';
-import './App.css';
+// import './main2';
+import './class9';
 
 function App(){
   return (
