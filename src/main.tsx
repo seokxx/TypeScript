@@ -243,15 +243,15 @@ let 리터럴네임 : 'kim';
 let me : '대머리'|'솔로';
 me = '대머리';
 
-function 리터럴함수(a: 'hello'):(1 | 0){
-  return 1
-}
+// function 리터럴함수(a: 'hello'):(1 | 0){
+//   return 1
+// }
 
-리터럴함수('hello')
+// 리터럴함수('hello')
 
-function 가위바위보(x : ('가위' |'바위'|'보')):('가위'|'바위'|'보')[]{
-  return ['바위']
-}
+// function 가위바위보(x : ('가위' |'바위'|'보')):('가위'|'바위'|'보')[]{
+//   return ['바위']
+// }
 
 //console.log(가위바위보('가위'))
 
@@ -261,17 +261,18 @@ var 자료 = {
 
 //console.log(자료.name)
 
-function myF(a:'kim'){
+// function myF(a:'kim'){
 
-}
-myF('kim')
-myF(자료.name)
+// }
+// myF('kim')
+// myF(자료.name)
 
-type 함수타입 = (a :string) => number;
+type 함수타입 = (a :number) => number;
 
 let 함수예제 : 함수타입  = function (a)  {
-  return 10
+  return a+1
 }
+
 
 //q1
 let 회원정보예제 : Member= {
@@ -319,3 +320,62 @@ function 콜백함수(a:string,b:CutType,c:RemoveType){
 } 
 
 콜백함수('010-1111-2222', cutZero, removeDash)
+
+class Person2{
+  name : string;
+  constructor(a:string){
+    this.name = a;
+  }
+  함수(a:string){
+    console.log('안녕'+a);
+  }
+}
+
+let 사람1 = new Person2('hong');
+let 사람2 = new Person2('kim');
+사람1.함수('안녕');
+console.log(사람1.name);
+console.log(사람2.name);
+
+type Square = {color : string, width: number}
+interface Square2 {color : string, width: number}
+
+let 네모 : Square2 = {color : 'red', width: 100}
+
+interface Student {name : string}
+interface Student {name : string}
+
+interface Teacher extends Student { age: number}
+
+let 학생 : Student = {name :'kim',}
+let 선생 : Teacher = {name: 'hong', age : 20}
+
+type Animal2 = {name : string}
+type Cat = {age : number} & Animal2 // &(intersection type) == extends
+
+//q1
+interface Product { brand: string, serialNumber: number, model:string[]}
+let 상품:Product = { brand : 'Samsung', serialNumber : 1360, model : ['TV', 'phone'] }
+
+//q2
+interface Basket { product: string, price: number}
+let 장바구니:Basket[] = [ { product : '청소기', price : 7000 }, { product : '삼다수', price : 800 } ];
+
+//q3
+interface Basket2 extends Basket{card:boolean};
+let 장바구니2:Basket2[] = [ { product : '청소기', price : 7000, card : false }, { product : '삼다수', price : 800, card : true } ] 
+
+//q4
+interface MathObj {
+  plus : (x:number, y:number) => number,
+  minus : (x:number, y:number) => number,
+}
+
+let 오브젝트2: MathObj = {
+  plus(x,y){
+    return x+y
+  },
+  minus(x,y){
+    return x-y
+  },
+}
