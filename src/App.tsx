@@ -9,7 +9,7 @@ import {
   decrementByAmount,
 } from "./index";
 
-import "./class22";
+import "./class23";
 
 function App() {
   const state = useSelector((state: RootState) => state);
