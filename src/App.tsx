@@ -9,6 +9,8 @@ import {
   decrementByAmount,
 } from "./index";
 
+import "./class22";
+
 function App() {
   const state = useSelector((state: RootState) => state);
   const dispatch = useDispatch<AppDispatch>();
